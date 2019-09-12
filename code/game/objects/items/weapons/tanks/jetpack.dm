@@ -122,3 +122,27 @@
 	if(G.total_moles >= 0.005)
 		return 1
 	qdel(G)
+	
+/obj/item/weapon/tank/jetpack/storage
+	name = "EVA maneuver rig"
+	desc = "A tank of compressed gas for use as propulsion in zero-gravity areas, now with storage pouches on the harness! Use with caution."
+	slot_flags = SLOT_BACK'
+	max_w_class = ITEM_SIZE_NORMAL
+	max_storage_space = DEFAULT_BACKPACK_STORAGE - 10
+	
+
+/obj/item/weapon/tank/jetpack/storage/carbondioxide
+	name = "EVA maneuver rig (CO2)"
+	desc = "A tank of compressed carbon dioxide for use as propulsion in zero-gravity areas, now with storage pouches. Painted black to indicate that it should not be used as a source for internals."
+	distribute_pressure = 0
+	icon_state = "jetpack-black"
+	item_state =  "jetpack-black"
+	starting_pressure = list(GAS_CO2 = 6*ONE_ATMOSPHERE)
+	
+/obj/item/weapon/tank/jetpack/storage/oxygen
+	name = "EVA maneuver rig (O2)"
+	desc = "A tank of compressed oxygen for use as propulsion in zero-gravity areasnow with storage pouches on the harness! Use with caution."
+	icon_state = "jetpack"
+	item_state = "jetpack"
+	starting_pressure = list(GAS_OXYGEN = 6*ONE_ATMOSPHERE)
+	
